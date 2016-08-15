@@ -3,6 +3,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 Vagrantfile
+.gitconfig
 
 Tarea 1/__pycache__
 .DS_Store
