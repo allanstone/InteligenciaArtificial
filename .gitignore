@@ -2,7 +2,11 @@
 __pycache__/
 *.py[cod]
 *$py.class
+Vagrantfile
 
+Tarea 1/__pycache__
+.DS_Store
+.viminfo
 # C extensions
 *.so
 
