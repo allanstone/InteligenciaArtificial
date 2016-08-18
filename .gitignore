@@ -4,6 +4,10 @@ __pycache__/
 *$py.class
 Vagrantfile
 .gitconfig
+.bash_history
+.cloud-locale-test.skip
+.vagrant
+Tarea 1/Numeros Complejos/__init__.py
 
 Tarea 1/__pycache__
 .DS_Store
