@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
 #-*- coding: utf-8 -*-
 
-from sympy import *
-
 """
 :platform: Unix, Windows
-synopsis:Este modulo implementa las operaciones con polinomios
+:synopsis: Este modulo implementa las operaciones con polinomios
 .. module:: Polinomio
 .. module author::
     Garrido Valencia Alan
@@ -14,6 +12,7 @@ synopsis:Este modulo implementa las operaciones con polinomios
     Zuñiga Hernandez Jonatan
 """
 
+from sympy import *
 
 class Polynomial:
     '''
@@ -33,9 +32,9 @@ class Polynomial:
         Se puede usar de la siguiente manera:
             >>> import Polinomio as P
             >>> pol1=P.Polynomial('x',2)
-            Dame el coefficient del termino x^2: 1
-            Dame el coefficient del termino x^1: 4
-            Dame el coefficient del termino x^0: 4
+            Dame el coeficiente del termino x^2: 1
+            Dame el coeficiente del termino x^1: 4
+            Dame el coeficiente del termino x^0: 4
             1.0*x**2 + 4.0*x + 4.0
             #También se puede pasar una lista:
             >>> pol2=P.Polynomial('x',2,[1,4,4])
@@ -61,7 +60,7 @@ class Polynomial:
                 grade-=1
         else:
             for exponente in range(grade,-1,-1):
-                coefficient=float(input("Dame el coefficient del termino %s^%d: " % (variable,exponente)))
+                coefficient=float(input("Dame el coeficiente del termino %s^%d: " % (variable,exponente)))
                 self.expresion+=coefficient*self.variable**exponente
         print(self.expresion)
 

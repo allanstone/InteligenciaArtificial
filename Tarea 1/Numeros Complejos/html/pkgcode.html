@@ -1,0 +1,369 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Documentación del Código &mdash; Numeros Complejos 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/pydoctheme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/sidebar.js"></script>
+    <link rel="shortcut icon" href="_static/py2.ico"/>
+    <link rel="top" title="Numeros Complejos 1.0 documentation" href="index.html" />
+    <link rel="next" title="Información sobre el código y la documentación" href="info.html" />
+    <link rel="prev" title="Tarea 1: Polinomios" href="intro.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="info.html" title="Información sobre el código y la documentación"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="intro.html" title="Tarea 1: Polinomios"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Numeros Complejos 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="documentacion-del-codigo">
+<h1>Documentación del Código<a class="headerlink" href="#documentacion-del-codigo" title="Permalink to this headline">¶</a></h1>
+<p>Esta es la documentación del código</p>
+<div class="section" id="numero-complejo">
+<h2>Numero Complejo<a class="headerlink" href="#numero-complejo" title="Permalink to this headline">¶</a></h2>
+<p>Esta es la documentación de la clase.</p>
+<span class="target" id="module-complexNumber"></span><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">platform:</th><td class="field-body">Unix, Windows</td>
+</tr>
+<tr class="field-even field"><th class="field-name">synopsis:</th><td class="field-body">Este módulo implementa las clases para operaciones con numeros complejos.</td>
+</tr>
+</tbody>
+</table>
+<span class="target" id="module-complexNumber"></span><dl class="class">
+<dt id="complexNumber.complexNumber">
+<em class="property">class </em><code class="descclassname">complexNumber.</code><code class="descname">complexNumber</code><span class="sig-paren">(</span><em>a</em>, <em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#complexNumber.complexNumber" title="Permalink to this definition">¶</a></dt>
+<dd><p>Esta clase implementa un numero complejo de las con las siguientes características.</p>
+<dl class="docutils">
+<dt>Atributos:</dt>
+<dd><blockquote class="first">
+<div><ul class="simple">
+<li>cplx: numero complejo guardado con el objeto</li>
+</ul>
+</div></blockquote>
+<dl class="last docutils">
+<dt>Métodos:</dt>
+<dd><ul class="first last simple">
+<li>__str__: Formatea el numero complejo para imprimirlo</li>
+<li>mod: Obtiene el modulo del numero complejo</li>
+<li>angle: Obtiene el angulo del numero complejo</li>
+<li>add: Suma un numero complejo</li>
+<li>sub: Resta un numero complejo</li>
+<li>mult: multiplica un numero complejo</li>
+<li>divi: divide un numero complejo</li>
+<li>pot: Eleva a una potencia el numero complejo</li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt>Se puede usar de la siguiente manera:</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">complexNumber</span> <span class="k">as</span> <span class="nn">c</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">num1</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">complexNumber</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">num2</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">complexNumber</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">num1</span><span class="p">)</span>
+<span class="go">1.00+3.00j</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">num1</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">num2</span><span class="p">)</span>
+<span class="go">(2+6j)</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<dl class="method">
+<dt id="complexNumber.complexNumber.add">
+<code class="descname">add</code><span class="sig-paren">(</span><em>cplx</em><span class="sig-paren">)</span><a class="headerlink" href="#complexNumber.complexNumber.add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Realiza la suma del numero complejo
+con otro recibido como parametro</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>cplx</strong> (<em>Obj complexNumber.</em>) &#8211; Numero complejo a sumar</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Obj complexNumber&#8211; Suma de los dos numeros complejos.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="complexNumber.complexNumber.angle">
+<code class="descname">angle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#complexNumber.complexNumber.angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>realiza el calculo del angulo del numero complejo de la siguiente manera
+ang= atan(cplx.imag/cplx.real)
+ang= polar(cplx)[1] en radianes</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">float&#8211; angulo del numero complejo</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="complexNumber.complexNumber.divi">
+<code class="descname">divi</code><span class="sig-paren">(</span><em>cplx</em><span class="sig-paren">)</span><a class="headerlink" href="#complexNumber.complexNumber.divi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Realiza la división entre el numero complejo
+recibido como parametro</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>cplx</strong> (<em>Obj complexNumber.</em>) &#8211; Numero complejo por el cual dividir</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Obj complexNumber&#8211; División entre los dos numero complejos</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="complexNumber.complexNumber.mod">
+<code class="descname">mod</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#complexNumber.complexNumber.mod" title="Permalink to this definition">¶</a></dt>
+<dd><p>Realiza el modulo del numero complejo de la siguiente manera
+mod= sqrt(cplx.real^2+cplx.imag^2)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">float&#8211; modulo del numero complejo</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="complexNumber.complexNumber.mult">
+<code class="descname">mult</code><span class="sig-paren">(</span><em>cplx</em><span class="sig-paren">)</span><a class="headerlink" href="#complexNumber.complexNumber.mult" title="Permalink to this definition">¶</a></dt>
+<dd><p>Realiza la multiplicación del numero
+complejo recibido como parametro</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>cplx</strong> (<em>Obj complexNumber.</em>) &#8211; Numero complejo a multiplicar</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Obj complexNumber&#8211; multiplicación de numeros complejos</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="complexNumber.complexNumber.pot">
+<code class="descname">pot</code><span class="sig-paren">(</span><em>grado</em><span class="sig-paren">)</span><a class="headerlink" href="#complexNumber.complexNumber.pot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Realiza la potenciación del numero complejo</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>grado</strong> (<em>integer.</em>) &#8211; Potencia a cual elevar el numero</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Obj complexNumber&#8211; Numero complejo elevado a el grado</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="complexNumber.complexNumber.sub">
+<code class="descname">sub</code><span class="sig-paren">(</span><em>cplx</em><span class="sig-paren">)</span><a class="headerlink" href="#complexNumber.complexNumber.sub" title="Permalink to this definition">¶</a></dt>
+<dd><p>Realiza la resta del numero complejo
+recibido como parametro</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>cplx</strong> (<em>Obj complexNumber.</em>) &#8211; Numero complejo a restar</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Obj complexNumber&#8211; Resta de los numeros complejos</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="test">
+<h2>Test<a class="headerlink" href="#test" title="Permalink to this headline">¶</a></h2>
+<p>Esta es la documentación del modulo de pruebas.</p>
+<span class="target" id="module-testComplexNumber"></span><dl class="class">
+<dt id="testComplexNumber.testComplexNumber">
+<em class="property">class </em><code class="descclassname">testComplexNumber.</code><code class="descname">testComplexNumber</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#testComplexNumber.testComplexNumber" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clase para pruebas unitarias de complexNumber</p>
+<dl class="docutils">
+<dt>Attributes:</dt>
+<dd><dl class="first last docutils">
+<dt>tesing_angle (array(complejo, resultado)): </dt>
+<dd>Arreglo de prubas para testear el metodo de angulo</dd>
+<dt>testing_div (array(complejo, complejo, resultado)): </dt>
+<dd>Arreglo de pruebas para testear el metodo de division</dd>
+<dt>testing_mod (array(complejo, resultado)): </dt>
+<dd>Arreglo de pruebas para testear el metodo de modulo</dd>
+<dt>testing_mult (array(complejo, complejo, resultado)): </dt>
+<dd>Arreglo de pruebas para testear el metodo de multiplicacion</dd>
+<dt>testing_sub (array(complejo, complejo, resultado)): Description</dt>
+<dd>Arreglo de pruebas para testear el metodo de restas</dd>
+<dt>testing_add (array(complejo, complejo, resultado)): </dt>
+<dd>Arreglo de sumas para testear el metodo de modulo</dd>
+</dl>
+</dd>
+</dl>
+<dl class="method">
+<dt id="testComplexNumber.testComplexNumber.testingAdd">
+<code class="descname">testingAdd</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#testComplexNumber.testComplexNumber.testingAdd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prueba unitaria de sumas</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="testComplexNumber.testComplexNumber.testingAngule">
+<code class="descname">testingAngule</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#testComplexNumber.testComplexNumber.testingAngule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prueba unitaria de angulo</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="testComplexNumber.testComplexNumber.testingDivi">
+<code class="descname">testingDivi</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#testComplexNumber.testComplexNumber.testingDivi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prueba unitaria de divisiones</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="testComplexNumber.testComplexNumber.testingMod">
+<code class="descname">testingMod</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#testComplexNumber.testComplexNumber.testingMod" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prueba unitaria de modulo</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="testComplexNumber.testComplexNumber.testingMult">
+<code class="descname">testingMult</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#testComplexNumber.testComplexNumber.testingMult" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prueba unitaria de multiplicaciones</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="testComplexNumber.testComplexNumber.testingPot">
+<code class="descname">testingPot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#testComplexNumber.testComplexNumber.testingPot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prueba unitaria de potencia</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="testComplexNumber.testComplexNumber.testingSub">
+<code class="descname">testingSub</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#testComplexNumber.testComplexNumber.testingSub" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prueba unitaria de restas</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/img.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Documentación del Código</a><ul>
+<li><a class="reference internal" href="#numero-complejo">Numero Complejo</a></li>
+<li><a class="reference internal" href="#test">Test</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="intro.html"
+                        title="previous chapter">Tarea 1: Polinomios</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="info.html"
+                        title="next chapter">Información sobre el código y la documentación</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/pkgcode.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="info.html" title="Información sobre el código y la documentación"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="intro.html" title="Tarea 1: Polinomios"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Numeros Complejos 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, Garrido Valencia Alan, Sánchez Baños Margarito, Torres Ortiz Luis Miguel &amp; Zuñiga Hernandez Jonatan.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.5.
+    </div>
+  </body>
+</html>

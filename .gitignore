@@ -18,6 +18,8 @@ Tarea 1/__pycache__
 #Source files of sphynx document tool
 /Polinomios/build/*
 /Polinomios/source/*
+/Numeros Complejos/build/*
+/Numeros Complejos/source/*
 Makefile
 
 # Distribution / packaging

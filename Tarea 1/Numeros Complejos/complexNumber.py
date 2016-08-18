@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
+#-*- coding: utf-8 -*-
+
 """
 :platform: Unix, Windows
-synopsis:Este modulo implementa las clases para operaciones con numeros complejos.
+:synopsis: Este módulo implementa las clases para operaciones con números complejos.
 .. module:: complexNumber
 .. module author::
     Garrido Valencia Alan
@@ -9,7 +11,6 @@ synopsis:Este modulo implementa las clases para operaciones con numeros complejo
     Torres Ortiz Luis Miguel
     Zuñiga Hernandez Jonatan    
 """
-#-*- coding: utf-8 -*-
 
 from sympy import atan2
 
