@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 #-*- coding: utf-8 -*-
 
-from math import *
-from cmath import polar
+from sympy import atan2
 
 """
 module::  
@@ -68,6 +67,6 @@ if __name__ == '__main__':
     print("Multiplicacion de %s con %s = %s" %(cplx1,cplx2,cplx1.mult(cplx2)))
     print("Division de %s con %s = %s" %(cplx1,cplx2,cplx1.divi(cplx2)))
     print("Potencia de %s ^3 = %s" %(cplx1,cplx1.pot(3)))
-    print("Módulo de %s = %s" %(cplx1,cplx1.mod()))
-    print("Ángulo de %s = %s" %(cplx1,cplx1.angle()))
+    print("Módulo de %s = %s" %(cplx2,cplx2.mod()))
+    print("Ángulo de %s = %s" %(cplx2,cplx2.angle()))
 

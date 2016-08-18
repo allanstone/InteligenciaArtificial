@@ -13,6 +13,9 @@ from ..Scripts.Polinomio import Polynomial
 from sympy import symbols
 
 class TestPolynomial(unittest.TestCase):
+    """
+        Esta clase es usada para pruebas del modulo Polinomio
+    """
 
     variable='x'
     pol1=Polynomial(variable,2,[2,4,20])

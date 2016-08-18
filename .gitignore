@@ -11,6 +11,11 @@ Tarea 1/__pycache__
 # C extensions
 *.so
 
+#Source files of sphynx document tool
+/Polinomios/build/*
+/Polinomios/source/*
+Makefile
+
 # Distribution / packaging
 .Python
 env/

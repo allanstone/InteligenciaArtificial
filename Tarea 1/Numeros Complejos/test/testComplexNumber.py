@@ -62,6 +62,11 @@ class testComplexNumber(unittest.TestCase):
         (complexNumber(3,2),complexNumber(4,-1),complex(0.5882352941176471,0.6470588235294118))
         )
 
+    testing_pot=(
+        (complexNumber(1,2),3,complex(-11,-2)),
+        (complexNumber(3,2),2,complex(5,12))
+        )
+
     testing_mod=(
         (complexNumber(1,2),2.23606797749979),
         (complexNumber(3,2),3.605551275463989)
@@ -73,7 +78,7 @@ class testComplexNumber(unittest.TestCase):
         )
 
 
-    def testingSumas(self):
+    def testingAdd(self):
         """
         Prueba unitaria de sumas
         """
@@ -81,7 +86,7 @@ class testComplexNumber(unittest.TestCase):
             result = a.add(b)
             self.assertEqual(should_be, result)
 
-    def testingRestas(self):
+    def testingSub(self):
         """
         Prueba unitaria de restas
         """
@@ -89,7 +94,7 @@ class testComplexNumber(unittest.TestCase):
             result = a.sub(b)
             self.assertEqual(should_be, result)
 
-    def testingMultiplicaciones(self):
+    def testingMult(self):
         """
         Prueba unitaria de multiplicaciones
         """
@@ -97,7 +102,7 @@ class testComplexNumber(unittest.TestCase):
             result = a.mult(b)
             self.assertEqual(should_be,result)
     
-    def testingDivisiones(self):
+    def testingDivi(self):
         """
         Prueba unitaria de divisiones
         """
@@ -105,7 +110,16 @@ class testComplexNumber(unittest.TestCase):
             result = a.divi(b)
             self.assertEqual(should_be, result)
 
-    def testingModulo(self):
+    def testingPot(self):
+        """
+        Prueba unitaria de potencia
+        """
+        for a,b,should_be in self.testing_pot:
+            result = a.pot(b)
+            self.assertEqual(should_be, result)
+
+
+    def testingMod(self):
         """
         Prueba unitaria de modulo
         """
@@ -113,7 +127,7 @@ class testComplexNumber(unittest.TestCase):
             result = a.mod()
             self.assertEqual(should_be, result)
 
-    def testingAngulo(self):
+    def testingAngule(self):
         """
         Prueba unitaria de angulo
         """

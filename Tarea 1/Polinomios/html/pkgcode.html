@@ -1,0 +1,320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Documentación del Código &mdash; Polinomios 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/pydoctheme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/sidebar.js"></script>
+    <link rel="shortcut icon" href="_static/py2.ico"/>
+    <link rel="top" title="Polinomios 1.0 documentation" href="index.html" />
+    <link rel="next" title="Información sobre el código y la documentación" href="info.html" />
+    <link rel="prev" title="Tarea 1: Polinomios" href="intro.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="info.html" title="Información sobre el código y la documentación"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="intro.html" title="Tarea 1: Polinomios"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Polinomios 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="documentacion-del-codigo">
+<h1>Documentación del Código<a class="headerlink" href="#documentacion-del-codigo" title="Permalink to this headline">¶</a></h1>
+<p>Esta es la documentación del código</p>
+<div class="section" id="polinomio">
+<h2>Polinomio<a class="headerlink" href="#polinomio" title="Permalink to this headline">¶</a></h2>
+<p>Esta es la documentación de la clase.</p>
+<span class="target" id="module-Polinomios.Scripts.Polinomio"></span><dl class="class">
+<dt id="Polinomios.Scripts.Polinomio.Polynomial">
+<em class="property">class </em><code class="descclassname">Polinomios.Scripts.Polinomio.</code><code class="descname">Polynomial</code><span class="sig-paren">(</span><em>variable</em>, <em>grade</em>, <em>*coefficients</em><span class="sig-paren">)</span><a class="headerlink" href="#Polinomios.Scripts.Polinomio.Polynomial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Esta clase implementa un polinomio de las con las siguientes características.
+Atributos:</p>
+<blockquote>
+<div><ul class="simple">
+<li>variable: La variable independiente del polinomio</li>
+<li>expresion: La expresión matemática que lo representa inicializado en cero</li>
+</ul>
+</div></blockquote>
+<dl class="docutils">
+<dt>Métodos:</dt>
+<dd><ul class="first last simple">
+<li>add: Suma de polinomios</li>
+<li>sub: Resta de polinomios</li>
+<li>multi: Multiplicación de polinomios</li>
+<li>divi: División de polinomios</li>
+<li>integr: Integrar un polinomio</li>
+<li>diff: Derivar un polinomio</li>
+<li>integrDef: Integración definida</li>
+</ul>
+</dd>
+<dt>Se puede usar de la siguiente manera:</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">Polinomio</span> <span class="k">as</span> <span class="nn">P</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pol1</span><span class="o">=</span><span class="n">P</span><span class="o">.</span><span class="n">Polynomial</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="go">Dame el coefficient del termino x^2: 1</span>
+<span class="go">Dame el coefficient del termino x^1: 4</span>
+<span class="go">Dame el coefficient del termino x^0: 4</span>
+<span class="go">1.0*x**2 + 4.0*x + 4.0</span>
+<span class="go">#También se puede pasar una lista:</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pol2</span><span class="o">=</span><span class="n">P</span><span class="o">.</span><span class="n">Polynomial</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">,[</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
+<span class="go">1.0*x**2 + 4.0*x + 4.0</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<dl class="method">
+<dt id="Polinomios.Scripts.Polinomio.Polynomial.add">
+<code class="descname">add</code><span class="sig-paren">(</span><em>pol</em><span class="sig-paren">)</span><a class="headerlink" href="#Polinomios.Scripts.Polinomio.Polynomial.add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Suma las expresiones matemáticas de dos polinomios regresando uno nuevo</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>pol</strong> (<em>Obj Polynomial.</em>) &#8211; Polinomio a que se sumará con el que invoca el método.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Obj Polynomial&#8211; El polinomio resultante.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Polinomios.Scripts.Polinomio.Polynomial.differ">
+<code class="descname">differ</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Polinomios.Scripts.Polinomio.Polynomial.differ" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deriva la expresión del polinomio con respecto a su variable independiente</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Obj Polynomial&#8211; El polinomio resultante.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Polinomios.Scripts.Polinomio.Polynomial.divi">
+<code class="descname">divi</code><span class="sig-paren">(</span><em>pol</em><span class="sig-paren">)</span><a class="headerlink" href="#Polinomios.Scripts.Polinomio.Polynomial.divi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Divide la expresión del polinomio que ejecuta el método entre la del parámetro</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>pol</strong> (<em>Obj Polynomial.</em>) &#8211; Polinomio a que se dividirá con el que invoca el método.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Obj Polynomial&#8211; El polinomio resultante.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Polinomios.Scripts.Polinomio.Polynomial.integr">
+<code class="descname">integr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Polinomios.Scripts.Polinomio.Polynomial.integr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Integra la expresión del polinomio con respecto a su variable independiente</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Obj Polynomial&#8211; El polinomio resultante.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Polinomios.Scripts.Polinomio.Polynomial.integrDef">
+<code class="descname">integrDef</code><span class="sig-paren">(</span><em>a</em>, <em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#Polinomios.Scripts.Polinomio.Polynomial.integrDef" title="Permalink to this definition">¶</a></dt>
+<dd><p>Integra la expresión del polinomio con respecto a su variable independiente en un rango definido</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>a</strong> (<em>float.</em>) &#8211; Extremo de integración inferior.</li>
+<li><strong>a</strong> &#8211; Extremo de integración superior.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">float&#8211; El valor del área debajo de la curva que representa el polinomio.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Polinomios.Scripts.Polinomio.Polynomial.mult">
+<code class="descname">mult</code><span class="sig-paren">(</span><em>pol</em><span class="sig-paren">)</span><a class="headerlink" href="#Polinomios.Scripts.Polinomio.Polynomial.mult" title="Permalink to this definition">¶</a></dt>
+<dd><p>Multiplica las expresiones matemáticas de dos polinomios regresando uno nuevo</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>pol</strong> (<em>Obj Polynomial.</em>) &#8211; Polinomio a que se multiplicará con el que invoca el método.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Obj Polynomial&#8211; El polinomio resultante.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Polinomios.Scripts.Polinomio.Polynomial.pointValue">
+<code class="descname">pointValue</code><span class="sig-paren">(</span><em>point</em><span class="sig-paren">)</span><a class="headerlink" href="#Polinomios.Scripts.Polinomio.Polynomial.pointValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evalua un punto en la expresíon del polinomio</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>point</strong> (<em>float.</em>) &#8211; Punto a evaluar en la expresión del polinomio.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">float&#8211; El resultado de evaluar la expresión.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Polinomios.Scripts.Polinomio.Polynomial.sub">
+<code class="descname">sub</code><span class="sig-paren">(</span><em>pol</em><span class="sig-paren">)</span><a class="headerlink" href="#Polinomios.Scripts.Polinomio.Polynomial.sub" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resta la expresión del polinomio que ejecuta el método entre la del parámetro</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>pol</strong> (<em>Obj Polynomial.</em>) &#8211; Polinomio a que se sumará con el que invoca el método.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Obj Polynomial&#8211; El polinomio resultante.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="test">
+<h2>Test<a class="headerlink" href="#test" title="Permalink to this headline">¶</a></h2>
+<p>Esta es la documentación del modulo de pruebas.</p>
+<span class="target" id="module-Polinomios.Test.TestPolynomial"></span><span class="target" id="module-testPolynomial"></span><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">synopsis:</th><td class="field-body">Este es un modulo de pruebas unitarias para el modulo Polynomio.</td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="Polinomios.Test.TestPolynomial.TestPolynomial">
+<em class="property">class </em><code class="descclassname">Polinomios.Test.TestPolynomial.</code><code class="descname">TestPolynomial</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Polinomios.Test.TestPolynomial.TestPolynomial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Esta clase es usada para pruebas del modulo Polinomio</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/pol.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Documentación del Código</a><ul>
+<li><a class="reference internal" href="#polinomio">Polinomio</a></li>
+<li><a class="reference internal" href="#test">Test</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="intro.html"
+                        title="previous chapter">Tarea 1: Polinomios</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="info.html"
+                        title="next chapter">Información sobre el código y la documentación</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/pkgcode.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="info.html" title="Información sobre el código y la documentación"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="intro.html" title="Tarea 1: Polinomios"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Polinomios 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, Garrido Valencia Alan, Sánchez Baños Margarito, Torres Ortiz Luis Miguel &amp; Zuñiga Hernandez Jonatan.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.5.
+    </div>
+  </body>
+</html>
