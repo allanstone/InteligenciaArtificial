@@ -9,18 +9,18 @@ Repositorio donde se alojarán las tareas y proyectos de la materia de Inteligen
 * Zuñiga Hernandez Jonatan
 
 ## TAREA 1
-* Puede revisar la defición de la tarea en la siguiente [presentación](http://dicyg.fi-c.unam.mx:8080/lalo/ia/presentaciones/introduccion-a-la-inteligencia-artificial#page=1) .
-        Realizar un programa que realice operaciones con números complejos:
-           <> Módulo y ángulo.
-           <> Suma y resta.
-           <> Multiplicación y División.
-           <> Potenciación.
-        Desarrollar un programa que realice las siguientes operaciones de polinomios de grado n:
-           <> Valor en un punto
-           <> Suma
-           <> Resta
-           <> Multiplicación
-           <> Derivada
+* Puede revisar la defición de la tarea en la siguiente [presentación](http://dicyg.fi-c.unam.mx:8080/lalo/ia/presentaciones/introduccion-a-la-inteligencia-artificial#page=1).  
+        Realizar un programa que realice operaciones con números complejos:  
+           <> Módulo y ángulo.  
+           <> Suma y resta.  
+           <> Multiplicación y División.  
+           <> Potenciación.  
+        Desarrollar un programa que realice las siguientes operaciones de polinomios de grado n:  
+           <> Valor en un punto.  
+           <> Suma.  
+           <> Resta.  
+           <> Multiplicación.  
+           <> Derivada.  
            <> Integral
 
 * Para probar los codigos son necesarios el modulo de **sympy** instalado, se puede
