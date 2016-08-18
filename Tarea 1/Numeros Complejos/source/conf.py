@@ -23,7 +23,6 @@ import sys
 # sys.path.insert(0, os.path.abspath('.'))
 sys.path.append(os.path.abspath('../'))
 sys.path.append(os.path.abspath('../test/'))
-#sys.path.append('/test')
 
 sys.path.append(os.path.abspath('_themes'))
 html_theme_path = ['_themes']
