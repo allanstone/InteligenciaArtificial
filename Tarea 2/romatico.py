@@ -105,7 +105,7 @@ class romantic:
         return "Message: "+self.message
 
 
-r = romantico("LA CRIPTOGRAFIA ES ROMANTICA")
+r = romantic("LA CRIPTOGRAFIA ES ROMANTICA")
 r.encrypt("HOLA")
 print(r)
 r.decrypt("hola")
