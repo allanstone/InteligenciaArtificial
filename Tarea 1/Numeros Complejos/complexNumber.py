@@ -20,7 +20,7 @@ class complexNumber:
     Esta clase implementa un numero complejo de las con las siguientes características.
     
     Atributos:
-           - cplx: numero complejo guardado con el objeto
+        - cplx: numero complejo guardado con el objeto
     Métodos:
        - __str__: Formatea el numero complejo para imprimirlo
        - mod: Obtiene el modulo del numero complejo

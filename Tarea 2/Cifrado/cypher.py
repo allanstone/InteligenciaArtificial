@@ -14,104 +14,155 @@
 
 
 class Cypher:
-    '''
-    Esta clase implementa un método de cifrado.
+    """
+    Clase para cifrar y decifrar romanticamente
     
-    Métodos:
-       - __str__: Formatea el numero complejo para imprimirlo
-       - mod: Obtiene el modulo del numero complejo
-       - angle: Obtiene el angulo del numero complejo
-       - add: Suma un numero complejo
-       - sub: Resta un numero complejo
-       - mult: multiplica un numero complejo
-       - divi: divide un numero complejo
-       - pot: Eleva a una potencia el numero complejo
-    
+    Metodos:
+       - encrypt: Cifra el mensaje pasado al constructor con la llave
+       - decrypt: Deifra el mensaje pasado al constructor con la llave
+
     Se puede usar de la siguiente manera:
-        >>> import complexNumber as c
-        >>> num1 = c.complexNumber(1,3)
-        >>> num2 = c.complexNumber(1,3)
-        >>> print(num1)
-        1.00+3.00j
-        >>> num1.add(num2)
-        (2+6j)
-    
-    def __init__(self,a,b):
-     
-        Constructor de la clase complexNumber se instancia con dos parametrso:
-         -Se pasa como parametro la parte real
-         -Se pasa como parametro la parte imaginaria
-         :param a: Parte real del numero complejo.
-         :type a: float.
-         :param b: Parte imaginaria del numero complejo.
-         :type b: float.
-        
-        Args:
-            a (float): Parte real del numero complejo
-            b (float): Parte imaginaria del numero complejo
-        '''
-        #self.cplx=complex(a,b)
-    def printMap(self,textToCipher,key):
+        >>> from romantico import romantic
+        >>>r =romantic("LA CRIPTOGRAFIA ES ROMANTICA")
+        >>>r.encrypt("HOLA")
+        >>>print(r)
+        Message: ROFSACSLIGIRNACTAEMISAPRAOTS
+        >>>r.decrypt("hola")
+        >>>print(r)
+        Message: LACRIPTOGRAFIAESROMANTICASSS
+    """
+    def printMap(self,textToCypher,key):
+    	"""
+        Imprime el mapa de caracteres.
+        :param textToCypher: Texto que se va a cifrar
+        :type textToCypher: string.
+        :param key: Llave que se utiliza para cifrar
+        :type key: string.
+        """
     	start=0
     	print(key)
-    	for end in range(0,len(textToCipher)+1,len(key)):
-    		print(textToCipher[start:end])
+    	for end in range(0,len(textToCypher)+1,len(key)):
+    		print(textToCypher[start:end])
     		start=end
 
-    def chunking(self,textToCipher, keyLen):
-    	return ([textToCipher[pos:pos+keyLen] for pos in range(0,len(textToCipher),keyLen)])
+    def chunking(self,textToCypher, keyLen):
+    	"""
+        Toma el texto a cifrar y lo divide en cadenas del tamaño de la llave.
+        :param textToCypher: Texto que se va a cifrar
+        :type textToCypher: string.
+        :param keyLen: Longitud de la llave
+        :type keyLen: int.
+        :returns: list -- Lista por comprensión de cadenas del tamaño de la llave
+        """
+    	return ([textToCypher[pos:pos+keyLen] for pos in range(0,len(textToCypher),keyLen)])
 
     def reorganize(self,key):
-    	#return([key.index(char) for char in sorted(key)])
+    	"""
+        Toma la llave y la regresa ordenada en orden alfabetico.
+        :param key: Llave que se utiliza para cifrar
+        :type key: string.
+        :returns: list -- Regresa el orden de los indices de la llave ordenada
+        """
     	newOrder=[]
     	for char in sorted(key):
     		newOrder.append(key.index(char))
     	return newOrder
 
     def reassembling(self,newOrder,charMap):
+    	"""
+        Utiliza el orden de indices para cambiar cada una de las cadenas del charMap
+
+        :param newOrder: Orden de indices que cambiará para cada cadena
+        :type newOrder: list.
+        :param charMap: Mapa de caracteres a reensamblar
+        :type charMap: list.
+        :returns: list -- Regresa el orden de los indices de la llave ordenada
+        """
     	newCharMap=[]
     	for string in charMap:
     		newCharMap.append(''.join([str(string[index]) for index in newOrder]))
     	return newCharMap
 
     def joinCharMap(self,charMap,keyLen):
+    	"""
+        Une de nuevo las cadenas del charMap
+
+        :param charMap: Mapa de caracteres a reensamblar
+        :type charMap: list.
+        :param keyLen: Longitud de la llave
+        :type keyLen: int.
+        :returns: string -- Regresa el texto cifrado
+        """
     	cyphedText=[]
     	for i in range(0,keyLen):
     		[cyphedText.append(string[i]) for string in charMap]
-    	print(''.join(cyphedText))
+    	return ''.join(cyphedText)
 
-
-
-
-
-
-    def cypher(self,text,key):
+    def cypher(self,textToCypher,key):
         '''
-        Realiza el modulo del numero complejo de la siguiente manera
-        mod= sqrt(cplx.real^2+cplx.imag^2)
+        Cifra un texto con una llave bajo un algoritmo descrito
         
-        :returns: float-- modulo del numero complejo
+        :param textToCypher: Llave que se utiliza para cifrar
+        :type textToCypher: .
+        :param key: Llave que se utiliza para cifrar
+        :type key: string.
+        :returns: string-- Cadena cifrada
         '''
-        plain=text.replace(' ','')
+        plain=textToCypher.replace(' ','')
         pad=len(plain)%len(key)
-        textToCipher=plain+'S'*(len(key)-pad)
-        self.printMap(textToCipher,key)
-        charMap=self.chunking(textToCipher,len(key))
+        textToCypher=plain+'S'*(len(key)-pad)
+        self.printMap(textToCypher,key)
+        charMap=self.chunking(textToCypher,len(key))
         newOrder=self.reorganize(key)
         print()
         newCharMap=self.reassembling(newOrder,charMap)
-        self.joinCharMap(newCharMap,len(key))
+        cyphedText=self.joinCharMap(newCharMap,len(key))
+        return cyphedText
+    
+    def unassamble(self,textToDecipher,key):
+    	chunkLen=int(len(textToDecipher)/len(key))
+    	return(self.chunking(textToDecipher,chunkLen))
 
+    def disrupt(self,key):
+    	"""
+        Toma la llave y la regresa el orden de indices original.
+        :param key: Llave que se utiliza para cifrar
+        :type key: string.
+        :returns: list -- Regresa el orden de los indices de la llave ordenada
+        """
+    	newOrder=[]
+    	for char in key:
+    		newOrder.append(key.index(char))
+    	return newOrder 
 
+    def rematch(self,oldOrder,charMap):
+    	oldString=[]
+    	for i in oldOrder:
+    		[oldString.append(string[index]) for string in charMap]
+    	return ''.join(cyphedText)
 
-
-
-
-
-        return textToCipher
+    def decypher(self,textToDecipher,key):
+        '''
+        Cifra un texto con una llave bajo el algoritmo contrario.
         
-        
+        :param textToCypher: Llave que se utiliza para cifrar
+        :type textToCypher: .
+        :param key: Llave que se utiliza para cifrar
+        :type key: string.
+        :returns: string-- Cadena cifrada
+        '''
+        self.printMap(textToDecipher,key)
+        oldOrder=self.disrupt(key)
+        charMap=self.unassamble(textToDecipher,key)
+        print(charMap)
+        newCharMap=self.rematch(oldOrder,charMap)
+        print(newCharMap)
+
+
 
 if __name__ == '__main__':
     c=Cypher()
-    print(c.cypher("la criptografia es romantica","hola"))
+    #print(c.cypher("La criptografia es romantica","hola"))
+    c.decypher("ROFSACSLIGIRNACTAEMISAPRAOTS","HOLA")
+    #print(c.decypher("La criptografia es romantica","hola"))
+

@@ -13,33 +13,46 @@
 """
 class romantic:
     """
-    Class to encrypt and decrypt romantically
+    Clase para cifrar y decifrar romanticamente
     
     Attributes:
-        matrix (dict): Description
+        matrix (dict): Matriz usada para la substitución
         message (TYPE): Description
         - message: message to be encrypted
     
     Methods:
-       - encrypt: encrypts the message sent to construct the object with the key sent
-       - decrypt: decrypts the message sent to construct the object with the key sent
+       - encrypt: Cifra el mensaje pasado al constructor con la llave
+       - decrypt: Deifra el mensaje pasado al constructor con la llave
+
+    Se puede usar de la siguiente manera:
+        >>> from romantico import romantic
+        >>>r =romantic("LA CRIPTOGRAFIA ES ROMANTICA")
+        >>>r.encrypt("HOLA")
+        >>>print(r)
+        Message: ROFSACSLIGIRNACTAEMISAPRAOTS
+        >>>r.decrypt("hola")
+        >>>print(r)
+        Message: LACRIPTOGRAFIAESROMANTICASSS
+
     """
     def __init__(self, message):
-        """Summary
+        """
+        Constructor muy romántico que quita los espacios de la cadena a cifrar
         
-        Args:
-            message (TYPE): Description
+        :param message: Mensaje a cifrar
+        :type message: string.
+    
         """
         self.message = message.replace(' ','')
 
     def encrypt(self, key):
-        """Summary
+        """
+        Realiza el método de cifrado mediante una matriz interna
         
-        Args:
-            key (TYPE): Description
-        
-        Returns:
-            TYPE: Description
+        :param key: Llave que se utiliza para cifrar
+        :type key: string.
+        :returns: self.message -- Resultado del cifrado
+
         """
         encrypted = ""
         self.setKey(key)
@@ -57,14 +70,15 @@ class romantic:
         return self.message
 
     def decrypt(self, key):
-        """Summary
-        
-        Args:
-            key (TYPE): Description
-        
-        Returns:
-            TYPE: Description
         """
+        Realiza el método de decifrado mediante contrario al de crypt
+        
+        :param key: Llave que se utiliza para decifrar
+        :type key: string.
+        :returns: self.message -- Resultado del decifrado
+
+        """
+
         self.setKey(key)
         descrifrado=""
         aux = sorted(key)
@@ -84,29 +98,21 @@ class romantic:
         return self.message
 
     def setKey(self, key):
-        """Summary
+        """
+        Agrega a un diccionario los caracteres de la llave como valores clave y los asocia con una lista vacia
         
-        Args:
-            key (TYPE): Description
-        
-        Returns:
-            TYPE: Description
+        :param key: Llave que se utiliza para decifrar
+        :type key: string.
+
         """
         self.matrix = {}
         for i in range(0,len(key)):
             self.matrix[key[i]] = []
 
     def __str__(self):
-        """Summary
-        
-        Returns:
-            TYPE: Description
+        """
+        Método mágico que imprime el mensaje si este es cifrado o decifrado
+.
+        :returns: self.message -- El mensaje original o el cifrado
         """
         return "Message: "+self.message
-
-
-r = romantico("LA CRIPTOGRAFIA ES ROMANTICA")
-r.encrypt("HOLA")
-print(r)
-r.decrypt("hola")
-print(r)
