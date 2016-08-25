@@ -3,7 +3,7 @@ Documentación del Código
 
 Esta es la documentación del código
 
-Numero Complejo
+Número Complejo
 ===============
 
 Esta es la documentación de la clase. 

@@ -21,16 +21,16 @@ class complexNumber:
     
     Atributos:
            - cplx: numero complejo guardado con el objeto
-        Métodos:
-           - __str__: Formatea el numero complejo para imprimirlo
-           - mod: Obtiene el modulo del numero complejo
-           - angle: Obtiene el angulo del numero complejo
-           - add: Suma un numero complejo
-           - sub: Resta un numero complejo
-           - mult: multiplica un numero complejo
-           - divi: divide un numero complejo
-           - pot: Eleva a una potencia el numero complejo
-    
+    Métodos:
+       - __str__: Formatea el numero complejo para imprimirlo
+       - mod: Obtiene el modulo del numero complejo
+       - angle: Obtiene el angulo del numero complejo
+       - add: Suma un numero complejo
+       - sub: Resta un numero complejo
+       - mult: multiplica un numero complejo
+       - divi: divide un numero complejo
+       - pot: Eleva a una potencia el numero complejo
+
     Se puede usar de la siguiente manera:
         >>> import complexNumber as c
         >>> num1 = c.complexNumber(1,3)
