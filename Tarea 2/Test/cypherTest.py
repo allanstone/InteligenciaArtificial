@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 #-*- coding: utf-8 -*-
-
 """
 :platform: Unix, Windows
 :synopsis: Este módulo es usado para probar los metodos de criptografía.
-.. module:: romanticoTest
+.. module:: cypherTest
 .. module author::
     Garrido Valencia Alan
     Sánchez Baños Margarito

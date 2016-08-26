@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 #-*- coding: utf-8 -*-
-
 """
 :platform: Unix, Windows
 :synopsis: Este módulo define una clase para cifrar y decifrar.
@@ -15,17 +14,36 @@
 
 class Cypher:
     """
-    Clase para cifrar y decifrar romanticamente
-    
-    Metodos:
-       - encrypt: Cifra el mensaje pasado al constructor con la llave
-       - decrypt: Deifra el mensaje pasado al constructor con la llave
+	    Clase para cifrar y decifrar románticamente.
+	    Metodos:
+	       - encrypt: Cifra el mensaje pasado al constructor con la llave
+	       - decrypt: Deifra el mensaje pasado al constructor con la llave
 
-    Se puede usar de la siguiente manera:
-        >>>from cypher import Cypher
-	    >>>c=Cypher()
-	    >>>print(c.cypher("LA CRIPTOGRAFIA ES ROMANTICA","HOLA"))
-	    >>>print(c.decypher("ROFSACSLIGIRNACTAEMISAPRAOTS","HOLA"))
+	    Se puede usar de la siguiente manera:
+	        >>> from cypher import Cypher
+	        >>> c=Cypher()
+	        >>> print(c.cypher("LA CRIPTOGRAFIA ES ROMANTICA","HOLA",True))
+			HOLA
+			LACR
+			IPTO
+			GRAF
+			IAES
+			ROMA
+			NTIC
+			ASSS
+			ROFSACSLIGIRNACTAEMISAPRAOTS
+
+		>>> print(c.decypher("ROFSACSLIGIRNACTAEMISAPRAOTS","HOLA",True))
+			AHLO
+			RLCA
+			OITP
+			FGAR
+			SIEA
+			ARMO
+			CNIT
+			SASS
+			LACRIPTOGRAFIAESROMANTICASSS
+
     """
     def printMap(self,textToCypher,key):
     	"""
@@ -55,6 +73,7 @@ class Cypher:
     def reorganize(self,key):
     	"""
         Toma la llave y la regresa ordenada en orden alfabetico.
+
         :param key: Llave que se utiliza para cifrar
         :type key: string.
         :returns: list -- Regresa el orden de los indices de la llave ordenada
@@ -96,7 +115,7 @@ class Cypher:
 
     def cypher(self,textToCypher,key,printMap=False):
         '''
-        Cifra un texto con una llave bajo un algoritmo descrito
+        Cifra un texto con una llave bajo un algoritmo descrito.
         
         :param textToCypher: Llave que se utiliza para cifrar
         :type textToCypher: .
@@ -118,14 +137,15 @@ class Cypher:
         return cyphedText
     
     def unassamble(self,textToDecipher,key):
-    	"""
+    	'''
         Toma el texto a decifrar y lo divide en cadenas del tamaño de la llave.
+
         :param textToDeCypher: Texto que se va a decifrar
         :type textToCypher: string.
         :param keyLen: Longitud de la llave
         :type keyLen: int.
         :returns: list -- Lista por comprensión de cadenas del tamaño de la llave
-        """
+        '''
     	chunkLen=int(len(textToDecipher)/len(key))
     	return(self.chunking(textToDecipher,chunkLen))
 
@@ -160,7 +180,7 @@ class Cypher:
 
     def attachCharMap(self,oldCharMap):
     	"""
-        Une de nuevo las cadenas del charMap
+        Une de nuevo las cadenas del charMap.
 
         :param charMap: Mapa de caracteres a reensamblar
         :type charMap: list.

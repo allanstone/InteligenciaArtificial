@@ -15,5 +15,5 @@ Test
 ====
 Esta es la documentación del modulo de pruebas. 
 
-.. automodule:: cypherTest
+.. automodule:: Test.cypherTest
    :members:
