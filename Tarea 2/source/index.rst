@@ -1,15 +1,20 @@
 .. Cifrado documentation master file, created by
-   sphinx-quickstart on Wed Aug 24 23:52:06 2016.
+   sphinx-quickstart on Tue Aug 16 19:28:13 2016.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Cifrado's documentation!
-===================================
+Bienvenido a la documentación de Cifrado
+========================================
 
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
+
+   intro
+   pkgcode
+   info
+
 
 
 

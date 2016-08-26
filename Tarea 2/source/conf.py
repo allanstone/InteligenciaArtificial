@@ -17,10 +17,20 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
+import os
+import sys
 # sys.path.insert(0, os.path.abspath('.'))
+sys.path.append('../Cifrado')
+#sys.path.append('../Test/')
 
+sys.path.append(os.path.abspath('_themes'))
+html_theme_path = ['_themes']
+html_theme = 'pydoctheme'
+
+html_theme_options = {
+   'collapsiblesidebar': True,
+   'sidebarbtncolor': '#eeeeee',
+}
 # -- General configuration ------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
@@ -122,7 +132,7 @@ todo_include_todos = False
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+#html_theme = 'alabaster'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -145,13 +155,13 @@ html_theme = 'alabaster'
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
 #
-# html_logo = None
+html_logo = "_img/heartbleed.jpg"
 
 # The name of an image file (relative to this directory) to use as a favicon of
 # the docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
 # pixels large.
 #
-# html_favicon = None
+html_favicon = "_img/py2.ico"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
