@@ -1,0 +1,399 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Tarea 2: Cifrado &mdash; Cifrado 2.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/pydoctheme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/sidebar.js"></script>
+    <link rel="shortcut icon" href="_static/py2.ico"/>
+    <link rel="top" title="Cifrado 2.1 documentation" href="index.html" />
+    <link rel="next" title="Documentación del Código" href="pkgcode.html" />
+    <link rel="prev" title="Bienvenido a la documentación de Cifrado" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pkgcode.html" title="Documentación del Código"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Bienvenido a la documentación de Cifrado"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Cifrado 2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="tarea-2-cifrado">
+<h1>Tarea 2: Cifrado<a class="headerlink" href="#tarea-2-cifrado" title="Permalink to this headline">¶</a></h1>
+<p>Puede revisar la defición de la tarea en la siguiente <a class="reference external" href="http://dicyg.fi-c.unam.mx:8080/lalo/ia/presentaciones/introduccion-a-la-inteligencia-artificial#page=8">presentación</a></p>
+<div class="section" id="objetivo">
+<h2>Objetivo<a class="headerlink" href="#objetivo" title="Permalink to this headline">¶</a></h2>
+<p>Consiste en hacer un código que se encargue de cifrar y descifrar texto de acuerdo
+al método mostrado a continuación.</p>
+</div>
+<div class="section" id="descripcion">
+<h2>Descripción<a class="headerlink" href="#descripcion" title="Permalink to this headline">¶</a></h2>
+<p>1. Este tipo de cifrado por columna con palabra clave consiste en formar una tabla con tantas
+columnas como letras tenga la palabra clave; a continuación, se escribe el texto en la tabla
+de izquierda a derecha y de arriba hacia abajo (sin espacios y, si hace falta, se rellenan los
+espacios de la última fila con algún caracter):</p>
+<p><strong>Texto : LA CRIPTOGRAFIA ES ROMANTICA</strong>
+<strong>Clave : HOLA</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">H</th>
+<th class="head">O</th>
+<th class="head">L</th>
+<th class="head">A</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>L</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+</tr>
+<tr class="row-odd"><td>I</td>
+<td>P</td>
+<td>T</td>
+<td>O</td>
+</tr>
+<tr class="row-even"><td>G</td>
+<td>R</td>
+<td>A</td>
+<td>F</td>
+</tr>
+<tr class="row-odd"><td>I</td>
+<td>A</td>
+<td>E</td>
+<td>S</td>
+</tr>
+<tr class="row-even"><td>R</td>
+<td>O</td>
+<td>M</td>
+<td>A</td>
+</tr>
+<tr class="row-odd"><td>N</td>
+<td>T</td>
+<td>I</td>
+<td>C</td>
+</tr>
+<tr class="row-even"><td>A</td>
+<td>S</td>
+<td>S</td>
+<td>S</td>
+</tr>
+</tbody>
+</table>
+<p>2. A continuación se reordenan las columnas alfabéticamente de acuerdo a la palabra clave (si
+hay repetición, el criterio de desempate es el orden de aparición en la palabra):</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">A</th>
+<th class="head">H</th>
+<th class="head">L</th>
+<th class="head">O</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>R</td>
+<td>L</td>
+<td>C</td>
+<td>A</td>
+</tr>
+<tr class="row-odd"><td>O</td>
+<td>I</td>
+<td>T</td>
+<td>P</td>
+</tr>
+<tr class="row-even"><td>F</td>
+<td>G</td>
+<td>A</td>
+<td>R</td>
+</tr>
+<tr class="row-odd"><td>S</td>
+<td>I</td>
+<td>E</td>
+<td>A</td>
+</tr>
+<tr class="row-even"><td>A</td>
+<td>R</td>
+<td>M</td>
+<td>O</td>
+</tr>
+<tr class="row-odd"><td>C</td>
+<td>N</td>
+<td>I</td>
+<td>T</td>
+</tr>
+<tr class="row-even"><td>S</td>
+<td>A</td>
+<td>S</td>
+<td>S</td>
+</tr>
+</tbody>
+</table>
+<p>3. Finalmente se toman los caracteres por columna de arriba hacia abajo y de izquierda a
+derecha obteniendo finalmente el texto codificado:</p>
+<p><strong>ROFSACSLIGIRNACTAEMISAPRAOTS</strong></p>
+<p>Para descifrar un texto codificado con este método, es necesario saber la palabra clave, y a continuación
+se aplican las operaciones siguientes, mostradas para descrifrar el ejemplo anterior:</p>
+<p><strong>Texto : ROFSACSLIGIRNACTAEMISAPRAOTS</strong>
+<strong>Clave : HOLA</strong></p>
+<ol class="arabic simple">
+<li>Se divide el texto en tantas partes como letras tiene la palabra clave (es exacta):</li>
+</ol>
+<p><strong>Grupos : ROFSACS LIGIRNA CTAEMIS APRAOTS</strong></p>
+<ol class="arabic simple" start="2">
+<li>Se ordena alfabéticamente la palabra clave:</li>
+</ol>
+<p><strong>Clave : HOLA</strong>
+<strong>Ordenada : AHLO</strong></p>
+<ol class="arabic simple" start="3">
+<li>Se coloca cada grupo bajo cada letra de la palabra clave ordenada:</li>
+</ol>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">A</th>
+<th class="head">H</th>
+<th class="head">L</th>
+<th class="head">O</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>R</td>
+<td>L</td>
+<td>C</td>
+<td>A</td>
+</tr>
+<tr class="row-odd"><td>O</td>
+<td>I</td>
+<td>T</td>
+<td>P</td>
+</tr>
+<tr class="row-even"><td>F</td>
+<td>G</td>
+<td>A</td>
+<td>R</td>
+</tr>
+<tr class="row-odd"><td>S</td>
+<td>I</td>
+<td>E</td>
+<td>A</td>
+</tr>
+<tr class="row-even"><td>A</td>
+<td>R</td>
+<td>M</td>
+<td>O</td>
+</tr>
+<tr class="row-odd"><td>C</td>
+<td>N</td>
+<td>I</td>
+<td>T</td>
+</tr>
+<tr class="row-even"><td>S</td>
+<td>A</td>
+<td>S</td>
+<td>S</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="4">
+<li>Se reacomoda la palabra clave junto con su columna correspondiente:</li>
+</ol>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">H</th>
+<th class="head">O</th>
+<th class="head">L</th>
+<th class="head">A</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>L</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+</tr>
+<tr class="row-odd"><td>I</td>
+<td>P</td>
+<td>T</td>
+<td>O</td>
+</tr>
+<tr class="row-even"><td>G</td>
+<td>R</td>
+<td>A</td>
+<td>F</td>
+</tr>
+<tr class="row-odd"><td>I</td>
+<td>A</td>
+<td>E</td>
+<td>S</td>
+</tr>
+<tr class="row-even"><td>R</td>
+<td>O</td>
+<td>M</td>
+<td>A</td>
+</tr>
+<tr class="row-odd"><td>N</td>
+<td>T</td>
+<td>I</td>
+<td>C</td>
+</tr>
+<tr class="row-even"><td>A</td>
+<td>S</td>
+<td>S</td>
+<td>S</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="5">
+<li>Se concatena cada línea de la tabla para obtener el texto el claro:</li>
+</ol>
+<p><strong>LACRIPTOGRAFIAESROMANTICASSS</strong></p>
+<div class="section" id="paradigma">
+<h3>Paradigma<a class="headerlink" href="#paradigma" title="Permalink to this headline">¶</a></h3>
+<p>Orientado a objetos</p>
+</div>
+<div class="section" id="lenguaje-de-programacion">
+<h3>Lenguaje de programación<a class="headerlink" href="#lenguaje-de-programacion" title="Permalink to this headline">¶</a></h3>
+<p>Python</p>
+<div class="section" id="version">
+<h4>Versión<a class="headerlink" href="#version" title="Permalink to this headline">¶</a></h4>
+<p>3.2&gt;=</p>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/heartbleed.jpg" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Tarea 2: Cifrado</a><ul>
+<li><a class="reference internal" href="#objetivo">Objetivo</a></li>
+<li><a class="reference internal" href="#descripcion">Descripción</a><ul>
+<li><a class="reference internal" href="#paradigma">Paradigma</a></li>
+<li><a class="reference internal" href="#lenguaje-de-programacion">Lenguaje de programación</a><ul>
+<li><a class="reference internal" href="#version">Versión</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Bienvenido a la documentación de Cifrado</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pkgcode.html"
+                        title="next chapter">Documentación del Código</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/intro.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pkgcode.html" title="Documentación del Código"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Bienvenido a la documentación de Cifrado"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Cifrado 2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, Garrido Valencia Alan Sánchez Baños Margarito Torres Ortiz Luis Miguel &amp; Zuñiga Hernandez Jonatan.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.5.
+    </div>
+  </body>
+</html>

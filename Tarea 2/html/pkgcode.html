@@ -1,0 +1,426 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Documentación del Código &mdash; Cifrado 2.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/pydoctheme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/sidebar.js"></script>
+    <link rel="shortcut icon" href="_static/py2.ico"/>
+    <link rel="top" title="Cifrado 2.1 documentation" href="index.html" />
+    <link rel="next" title="Información sobre el código y la documentación" href="info.html" />
+    <link rel="prev" title="Tarea 2: Cifrado" href="intro.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="info.html" title="Información sobre el código y la documentación"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="intro.html" title="Tarea 2: Cifrado"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Cifrado 2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="documentacion-del-codigo">
+<h1>Documentación del Código<a class="headerlink" href="#documentacion-del-codigo" title="Permalink to this headline">¶</a></h1>
+<p>Esta es la documentación del código</p>
+<div class="section" id="cifrado">
+<h2>Cifrado<a class="headerlink" href="#cifrado" title="Permalink to this headline">¶</a></h2>
+<p>Esta es la documentación de la clase.</p>
+<span class="target" id="module-Cifrado.cypher"></span><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">platform:</th><td class="field-body">Unix, Windows</td>
+</tr>
+<tr class="field-even field"><th class="field-name">synopsis:</th><td class="field-body">Este módulo define una clase para cifrar y decifrar.</td>
+</tr>
+</tbody>
+</table>
+<span class="target" id="module-complexNumber"></span><dl class="class">
+<dt id="Cifrado.cypher.Cypher">
+<em class="property">class </em><code class="descclassname">Cifrado.cypher.</code><code class="descname">Cypher</code><a class="headerlink" href="#Cifrado.cypher.Cypher" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clase para cifrar y decifrar románticamente.
+Metodos:</p>
+<blockquote>
+<div><ul class="simple">
+<li>encrypt: Cifra el mensaje pasado al constructor con la llave</li>
+<li>decrypt: Deifra el mensaje pasado al constructor con la llave</li>
+</ul>
+</div></blockquote>
+<dl class="docutils">
+<dt>Se puede usar de la siguiente manera:</dt>
+<dd><div class="first highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">cypher</span> <span class="k">import</span> <span class="n">Cypher</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span><span class="o">=</span><span class="n">Cypher</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">cypher</span><span class="p">(</span><span class="s2">&quot;LA CRIPTOGRAFIA ES ROMANTICA&quot;</span><span class="p">,</span><span class="s2">&quot;HOLA&quot;</span><span class="p">,</span><span class="kc">True</span><span class="p">))</span>
+<span class="go">        HOLA</span>
+<span class="go">        LACR</span>
+<span class="go">        IPTO</span>
+<span class="go">        GRAF</span>
+<span class="go">        IAES</span>
+<span class="go">        ROMA</span>
+<span class="go">        NTIC</span>
+<span class="go">        ASSS</span>
+<span class="go">        ROFSACSLIGIRNACTAEMISAPRAOTS</span>
+</pre></div>
+</div>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">decypher</span><span class="p">(</span><span class="s2">&quot;ROFSACSLIGIRNACTAEMISAPRAOTS&quot;</span><span class="p">,</span><span class="s2">&quot;HOLA&quot;</span><span class="p">,</span><span class="kc">True</span><span class="p">))</span>
+<span class="go">        AHLO</span>
+<span class="go">        RLCA</span>
+<span class="go">        OITP</span>
+<span class="go">        FGAR</span>
+<span class="go">        SIEA</span>
+<span class="go">        ARMO</span>
+<span class="go">        CNIT</span>
+<span class="go">        SASS</span>
+<span class="go">        LACRIPTOGRAFIAESROMANTICASSS</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<dl class="method">
+<dt id="Cifrado.cypher.Cypher.attachCharMap">
+<code class="descname">attachCharMap</code><span class="sig-paren">(</span><em>oldCharMap</em><span class="sig-paren">)</span><a class="headerlink" href="#Cifrado.cypher.Cypher.attachCharMap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Une de nuevo las cadenas del charMap.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>charMap</strong> (<em>list.</em>) &#8211; Mapa de caracteres a reensamblar</li>
+<li><strong>keyLen</strong> (<em>int.</em>) &#8211; Longitud de la llave</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">string &#8211; Regresa el texto cifrado</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cifrado.cypher.Cypher.chunking">
+<code class="descname">chunking</code><span class="sig-paren">(</span><em>textToCypher</em>, <em>keyLen</em><span class="sig-paren">)</span><a class="headerlink" href="#Cifrado.cypher.Cypher.chunking" title="Permalink to this definition">¶</a></dt>
+<dd><p>Toma el texto a cifrar y lo divide en cadenas del tamaño de la llave.
+:param textToCypher: Texto que se va a cifrar
+:type textToCypher: string.
+:param keyLen: Longitud de la llave
+:type keyLen: int.
+:returns: list &#8211; Lista por comprensión de cadenas del tamaño de la llave</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cifrado.cypher.Cypher.cypher">
+<code class="descname">cypher</code><span class="sig-paren">(</span><em>textToCypher</em>, <em>key</em>, <em>printMap=False</em><span class="sig-paren">)</span><a class="headerlink" href="#Cifrado.cypher.Cypher.cypher" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cifra un texto con una llave bajo un algoritmo descrito.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>textToCypher</strong> &#8211; Llave que se utiliza para cifrar</li>
+<li><strong>key</strong> (<em>string.</em>) &#8211; Llave que se utiliza para cifrar</li>
+<li><strong>printMap</strong> (<em>string.</em>) &#8211; Parámetro opcional si se desea ver el mapa de carácteres</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">string&#8211; Cadena cifrada</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cifrado.cypher.Cypher.decypher">
+<code class="descname">decypher</code><span class="sig-paren">(</span><em>textToDecipher</em>, <em>key</em>, <em>printMap=False</em><span class="sig-paren">)</span><a class="headerlink" href="#Cifrado.cypher.Cypher.decypher" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cifra un texto con una llave bajo el algoritmo contrario.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>textToCypher</strong> &#8211; Llave que se utiliza para cifrar</li>
+<li><strong>key</strong> (<em>string.</em>) &#8211; Llave que se utiliza para cifrar</li>
+<li><strong>printMap</strong> (<em>string.</em>) &#8211; Parámetro opcional si se desea ver el mapa de carácteres</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">string&#8211; Cadena cifrada</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cifrado.cypher.Cypher.disrupt">
+<code class="descname">disrupt</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#Cifrado.cypher.Cypher.disrupt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Toma la llave y la regresa el orden de indices original.
+:param key: Llave que se utiliza para cifrar
+:type key: string.
+:returns: list &#8211; Regresa el orden de los indices de la llave ordenada</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cifrado.cypher.Cypher.joinCharMap">
+<code class="descname">joinCharMap</code><span class="sig-paren">(</span><em>charMap</em>, <em>keyLen</em><span class="sig-paren">)</span><a class="headerlink" href="#Cifrado.cypher.Cypher.joinCharMap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Une de nuevo las cadenas del charMap</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>charMap</strong> (<em>list.</em>) &#8211; Mapa de caracteres a reensamblar</li>
+<li><strong>keyLen</strong> (<em>int.</em>) &#8211; Longitud de la llave</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">string &#8211; Regresa el texto cifrado</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cifrado.cypher.Cypher.printMap">
+<code class="descname">printMap</code><span class="sig-paren">(</span><em>textToCypher</em>, <em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#Cifrado.cypher.Cypher.printMap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Imprime el mapa de caracteres.
+:param textToCypher: Texto que se va a cifrar
+:type textToCypher: string.
+:param key: Llave que se utiliza para cifrar
+:type key: string.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cifrado.cypher.Cypher.reassembling">
+<code class="descname">reassembling</code><span class="sig-paren">(</span><em>newOrder</em>, <em>charMap</em><span class="sig-paren">)</span><a class="headerlink" href="#Cifrado.cypher.Cypher.reassembling" title="Permalink to this definition">¶</a></dt>
+<dd><p>Utiliza el orden de indices para cambiar cada una de las cadenas del charMap</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>newOrder</strong> (<em>list.</em>) &#8211; Orden de indices que cambiará para cada cadena</li>
+<li><strong>charMap</strong> (<em>list.</em>) &#8211; Mapa de caracteres a reensamblar</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">list &#8211; Regresa el orden de los indices de la llave ordenada</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cifrado.cypher.Cypher.rematch">
+<code class="descname">rematch</code><span class="sig-paren">(</span><em>charMap</em>, <em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#Cifrado.cypher.Cypher.rematch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Une de nuevo las cadenas del mapa de caracteres con el orden por renglon en vez de por columna</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>charMap</strong> (<em>list.</em>) &#8211; Mapa de caracteres a reacomodar</li>
+<li><strong>key</strong> (<em>string.</em>) &#8211; La llave con la que se cifró</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">string &#8211; Regresa el mapa de caracteres reacomodado</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cifrado.cypher.Cypher.reorganize">
+<code class="descname">reorganize</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#Cifrado.cypher.Cypher.reorganize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Toma la llave y la regresa ordenada en orden alfabetico.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>key</strong> (<em>string.</em>) &#8211; Llave que se utiliza para cifrar</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">list &#8211; Regresa el orden de los indices de la llave ordenada</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cifrado.cypher.Cypher.unassamble">
+<code class="descname">unassamble</code><span class="sig-paren">(</span><em>textToDecipher</em>, <em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#Cifrado.cypher.Cypher.unassamble" title="Permalink to this definition">¶</a></dt>
+<dd><p>Toma el texto a decifrar y lo divide en cadenas del tamaño de la llave.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>textToDeCypher</strong> &#8211; Texto que se va a decifrar</li>
+<li><strong>keyLen</strong> (<em>int.</em>) &#8211; Longitud de la llave</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">list &#8211; Lista por comprensión de cadenas del tamaño de la llave</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="test">
+<h2>Test<a class="headerlink" href="#test" title="Permalink to this headline">¶</a></h2>
+<p>Esta es la documentación del modulo de pruebas.</p>
+<span class="target" id="module-Test.cypherTest"></span><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">platform:</th><td class="field-body">Unix, Windows</td>
+</tr>
+<tr class="field-even field"><th class="field-name">synopsis:</th><td class="field-body">Este módulo es usado para probar los metodos de criptografía.</td>
+</tr>
+</tbody>
+</table>
+<span class="target" id="module-cypherTest"></span><dl class="class">
+<dt id="Test.cypherTest.TestCypher">
+<em class="property">class </em><code class="descclassname">Test.cypherTest.</code><code class="descname">TestCypher</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Test.cypherTest.TestCypher" title="Permalink to this definition">¶</a></dt>
+<dd><p>Esta clase es usada para pruebas del modulo romantico</p>
+<dl class="method">
+<dt id="Test.cypherTest.TestCypher.testDencrypt1">
+<code class="descname">testDencrypt1</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Test.cypherTest.TestCypher.testDencrypt1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prueba unitaria de encrypt1</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Test.cypherTest.TestCypher.testDencrypt2">
+<code class="descname">testDencrypt2</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Test.cypherTest.TestCypher.testDencrypt2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prueba unitaria de encrypt2</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Test.cypherTest.TestCypher.testEncrypt1">
+<code class="descname">testEncrypt1</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Test.cypherTest.TestCypher.testEncrypt1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prueba unitaria de encrypt1</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Test.cypherTest.TestCypher.testEncrypt2">
+<code class="descname">testEncrypt2</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Test.cypherTest.TestCypher.testEncrypt2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prueba unitaria de encrypt2</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/heartbleed.jpg" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Documentación del Código</a><ul>
+<li><a class="reference internal" href="#cifrado">Cifrado</a></li>
+<li><a class="reference internal" href="#test">Test</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="intro.html"
+                        title="previous chapter">Tarea 2: Cifrado</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="info.html"
+                        title="next chapter">Información sobre el código y la documentación</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/pkgcode.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="info.html" title="Información sobre el código y la documentación"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="intro.html" title="Tarea 2: Cifrado"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Cifrado 2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, Garrido Valencia Alan Sánchez Baños Margarito Torres Ortiz Luis Miguel &amp; Zuñiga Hernandez Jonatan.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.5.
+    </div>
+  </body>
+</html>

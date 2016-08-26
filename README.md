@@ -33,11 +33,10 @@ Repositorio donde se alojarán las tareas y proyectos de la materia de Inteligen
 
 ## TAREA 2
 * Puede revisar la defición de la tarea en la siguiente [presentación](http://dicyg.fi-c.unam.mx:8080/lalo/ia/presentaciones/introduccion-a-la-inteligencia-artificial#page=8). 
-
         Consiste en hacer un código que se encargue de cifrar y descifrar texto:
 
         ->Texto : LA CRIPTOGRAFIA ES ROMANTICA
         ->Clave : HOLA
-        
+
         ->Texto Cifrado: ROFSACSLIGIRNACTAEMISAPRAOTS
 
