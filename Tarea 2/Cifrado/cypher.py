@@ -3,7 +3,7 @@
 """
 :platform: Unix, Windows
 :synopsis: Este módulo define una clase para cifrar y decifrar.
-.. module:: complexNumber
+.. module:: cypher
 .. module author::
     Garrido Valencia Alan
     Sánchez Baños Margarito
