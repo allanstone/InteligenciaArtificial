@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Documentación del Código &mdash; Algoritmo Genetico 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/pydoctheme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/sidebar.js"></script>
+    <link rel="shortcut icon" href="_static/py2.ico"/>
+    <link rel="top" title="Algoritmo Genetico 1.0 documentation" href="index.html" />
+    <link rel="next" title="Información sobre el código y la documentación" href="info.html" />
+    <link rel="prev" title="Tarea 2: Cifrado" href="intro.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="info.html" title="Información sobre el código y la documentación"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="intro.html" title="Tarea 2: Cifrado"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Algoritmo Genetico 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="documentacion-del-codigo">
+<h1>Documentación del Código<a class="headerlink" href="#documentacion-del-codigo" title="Permalink to this headline">¶</a></h1>
+<p>Esta es la documentación del código</p>
+<div class="section" id="algoritmo-genetico">
+<h2>Algoritmo Genético<a class="headerlink" href="#algoritmo-genetico" title="Permalink to this headline">¶</a></h2>
+<p>Esta es la documentación de la clase.</p>
+<span class="target" id="module-AlgoritmoGenetico.mejorVillano"></span><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">platform:</th><td class="field-body">Unix, Windows</td>
+</tr>
+<tr class="field-even field"><th class="field-name">synopsis:</th><td class="field-body">Este módulo define implementa un algoritmo genético para crear al mejor villano.</td>
+</tr>
+</tbody>
+</table>
+<span class="target" id="module-complexNumber"></span><dl class="class">
+<dt id="AlgoritmoGenetico.mejorVillano.Villain">
+<em class="property">class </em><code class="descclassname">AlgoritmoGenetico.mejorVillano.</code><code class="descname">Villain</code><span class="sig-paren">(</span><em>*abilities</em><span class="sig-paren">)</span><a class="headerlink" href="#AlgoritmoGenetico.mejorVillano.Villain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clase villano.
+Atributos:</p>
+<blockquote>
+<div><ul class="simple">
+<li>abilities: Una lista con los valores de las habilidades del villano</li>
+</ul>
+</div></blockquote>
+<dl class="docutils">
+<dt>Se puede usar de la siguiente manera:</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">darthVader</span><span class="o">=</span><span class="n">Villain</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">darthVader</span><span class="o">.</span><span class="n">abilities</span>
+<span class="go">[2,3,0,3,7,1,2,4,3,8]</span>
+<span class="go">#También se puede pasar una lista:</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">kidBu</span><span class="o">=</span><span class="n">Villain</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">kidBu</span><span class="o">.</span><span class="n">abilities</span>
+<span class="go">[4,4,1,2,1,1,5,4,3,2]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="AlgoritmoGenetico.mejorVillano.createCrossbreed">
+<code class="descclassname">AlgoritmoGenetico.mejorVillano.</code><code class="descname">createCrossbreed</code><span class="sig-paren">(</span><em>Villain1</em>, <em>Villain2</em><span class="sig-paren">)</span><a class="headerlink" href="#AlgoritmoGenetico.mejorVillano.createCrossbreed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Crea una nuevo villano de de la combinación de otros dos.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>Villain1</strong> (<em>Villain.</em>) &#8211; Villano del que se obtendrá un número aleatorio de habilidades.</li>
+<li><strong>Villain2</strong> (<em>Villain.</em>) &#8211; Villano del que se obtendrá el resto de las habilidades.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Obj Villain&#8211; Villano con valores seleccionados de los otros dos.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="AlgoritmoGenetico.mejorVillano.createGeneration">
+<code class="descclassname">AlgoritmoGenetico.mejorVillano.</code><code class="descname">createGeneration</code><span class="sig-paren">(</span><em>population</em><span class="sig-paren">)</span><a class="headerlink" href="#AlgoritmoGenetico.mejorVillano.createGeneration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Crea una nueva generación con un villano con valores seleccionados aleatoriamente de la población.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>population</strong> (<em>list.</em>) &#8211; Lista de villanos de la que se obtendrá el nuevo villano.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Obj Villain&#8211; Villano con valores seleccionados de la población.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="AlgoritmoGenetico.mejorVillano.createNewPopulation">
+<code class="descclassname">AlgoritmoGenetico.mejorVillano.</code><code class="descname">createNewPopulation</code><span class="sig-paren">(</span><em>Villain1</em>, <em>Villain2</em><span class="sig-paren">)</span><a class="headerlink" href="#AlgoritmoGenetico.mejorVillano.createNewPopulation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Crea una nueva generación de villanos creados apartir de otros dos.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>Villain1</strong> (<em>Villain.</em>) &#8211; Villano del que se obtendrá un número aleatorio de habilidades.</li>
+<li><strong>Villain2</strong> (<em>Villain.</em>) &#8211; Villano del que se obtendrá el resto de las habilidades.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">list&#8211; Lista de nueva generación de villanos.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="AlgoritmoGenetico.mejorVillano.populate">
+<code class="descclassname">AlgoritmoGenetico.mejorVillano.</code><code class="descname">populate</code><span class="sig-paren">(</span><em>max</em><span class="sig-paren">)</span><a class="headerlink" href="#AlgoritmoGenetico.mejorVillano.populate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Crea una población de villanos igual al valor que se le pasa como parámetro.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>max</strong> (<em>int.</em>) &#8211; Número máximo de villanos que se requiere.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">list population&#8211; Lista con los villanos y sus valores.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Documentación del Código</a><ul>
+<li><a class="reference internal" href="#algoritmo-genetico">Algoritmo Genético</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="intro.html"
+                        title="previous chapter">Tarea 2: Cifrado</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="info.html"
+                        title="next chapter">Información sobre el código y la documentación</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/pkgcode.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="info.html" title="Información sobre el código y la documentación"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="intro.html" title="Tarea 2: Cifrado"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Algoritmo Genetico 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, Garrido Valencia Alan Sánchez Baños Margarito Torres Ortiz Luis Miguel Zuñiga Hernandez Jonatan.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.5.
+    </div>
+  </body>
+</html>
