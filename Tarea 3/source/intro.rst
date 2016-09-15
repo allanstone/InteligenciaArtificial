@@ -1,13 +1,12 @@
-Tarea 2: Cifrado
-****************
+Tarea 3: Algoritmo Genético
+***************************
 
-Puede revisar la defición de la tarea en la siguiente `presentación <http://dicyg.fi-c.unam.mx:8080/lalo/ia/presentaciones/introduccion-a-la-inteligencia-artificial#page=8>`_
+Puede revisar la defición de la tarea en la siguiente `presentación <http://dicyg.fi-c.unam.mx:8080/lalo/ia/presentaciones/introduccion-a-la-inteligencia-artificial#page=19>`_
 
 Objetivo
 ========
 
-Consiste en hacer un código que se encargue de cifrar y descifrar texto de acuerdo
-al método mostrado a continuación.
+Consiste en hacer un código que m ediante un algoritmo genético cree al mejor supervillano, o eso se espera.
 
 Descripción
 ===========

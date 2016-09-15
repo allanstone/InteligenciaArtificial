@@ -2,8 +2,8 @@
 #-*- coding: utf-8 -*-
 """
 :platform: Unix, Windows
-:synopsis: Este módulo define implementa un algoritmo genético para crear al mejor villano.
-.. module:: complexNumber
+:synopsis: Este módulo implementa un algoritmo genético para crear al mejor villano.
+.. module:: mejorVillano
 .. module author::
     Garrido Valencia Alan
     Sánchez Baños Margarito
