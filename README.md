@@ -55,3 +55,15 @@ Repositorio donde se alojarán las tareas y proyectos de la materia de Inteligen
             6. Finalmente, aplicar los pasos 2, 3 y 4 sobre la nueva población de 10 Sedumentes para
             obtener al mejor supervillano.
 
+## TAREA 4
+* Puede revisar la defición de la tarea en la siguiente [presentación](http://dicyg.fi-c.unam.mx:8080/lalo/ia/presentaciones/agentes-inteligentes-y-ambientes#page=9). 
+        Consiste en realizar los siguientes programas:
+
+        -> Desarrollar el programa para un agente seguidor de línea de tipo reflejo simple con tres
+        sensores de luz y dos motores.
+        -> Desarrollar el programa para un agente basado en metas seguidor de línea cuya directiva es
+        limpiar (tipo Mo).
+
+
+
+

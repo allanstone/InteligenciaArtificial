@@ -34,61 +34,91 @@ class Agent:
            Constructor de la clase puede instanciar de dos maneras diferentes:
             -Sin parámetros, el agente empezará a girar en espiral ya que detecta que no hay línea
             -Se pasa directamente el estado de los sensores a a la funcion motion
-            :param sensors: Lista con los valores de las habilidades.
-            :type sensors: list.
+            :param sensors: Diccionario con el estado de los sensores que son valores booleanos.
+            :type sensors: dict.
         '''
+        self.motors={'m1':1,'m2':1}
         if sensors:
             self.sensors=sensors
-            self.motion(sensors)
+            self.motion()
         else:
             self.sensors={'s1':False,'s2':False,'s3':False}
-            self.motion(sensors)
+            self.motion()
 
-
-    def motion(sensors):
+    def sense(self,line):
         """
-            Define la rotacion de los motores segun el estado de los sensores
+            Sensa la línea mediante tres puntos y actualiza el estado de los sensores.
+            :param line: Puntos de la linea que pueden ser apreciados, serán leídos de un archivo.
+            :type line: list.
+            :returns: dict. sensors-- Diccionario con el estado de los sensores.
         """
-        if not sensors[0] and not sensors[1] and not sensors[2]:
-            print("000")
-        elif not sensors[0] and not sensors[1] and sensors[2]:
-            print("001")
-        elif not sensors[0] and sensors[1] and not sensors[2]:
-            print("010")
-        elif not sensors[0] and sensors[1] and sensors[2]:
-            print("011")
-        elif sensors[0] and not sensors[1] and not sensors[2]:
-            print("100")
-        elif sensors[0] and not sensors[1] and sensors[2]:
-            print("101")
-        elif sensors[0] and sensors[1] and not sensors[2]:
-            print("110")
-        elif sensors[0] and sensors[1] and sensors[2]:
-            print("111")
+        for key,view in zip(self.sensors.keys(),line):
+            self.sensors[key]=bool(view)
+        return self.sensors
 
 
 
+    def motion(self):
+        """
+            Define la rotacion de los motores según el estado de los sensores.
+
+            :returns: dict. motors-- Diccionario con el estado de los motores.
+        """
+        if not self.sensors['s1'] and not self.sensors['s1'] and not self.sensors['s2']:
+            print("Giro rápido en espiral")
+            self.motors[0]=2
+            self.motors[1]=1
+        elif not self.sensors['s1'] and not self.sensors['s1'] and self.sensors['s2']:
+            print("Giro a la derecha")
+            self.motors[0]=1
+            self.motors[1]=0
+        elif not self.sensors['s1'] and self.sensors['s1'] and not self.sensors['s2']:
+            print("Sigue de frente")
+            self.motors[0]=2
+            self.motors[1]=1
+        elif not self.sensors['s1'] and self.sensors['s1'] and self.sensors['s2']:
+            print("Giro a la derecha")
+            self.motors[0]=1
+            self.motors[1]=0
+        elif self.sensors['s1'] and not self.sensors['s1'] and not self.sensors['s2']:
+            print("Giro a la izquierda")
+            self.motors[0]=0
+            self.motors[1]=1
+        elif self.sensors['s1'] and not self.sensors['s1'] and self.sensors['s2']:
+            print("Giro rápido en espiral")
+            self.motors[0]=2
+            self.motors[1]=1
+        elif self.sensors['s1'] and self.sensors['s1'] and not self.sensors['s2']:
+            print("Giro a la izquierda")
+            self.motors[0]=0
+            self.motors[1]=1
+        elif self.sensors['s1'] and self.sensors['s1'] and self.sensors['s2']:
+            print("Giro rápido en espiral")
+            self.motors[0]=2
+            self.motors[1]=1
+        return self.motors
 
 
 class Mo(Agent):
     """docstring for Mo"""
-    def __init__(self, arg):
-        super(Mo, self).__init__()
-        self.arg = arg
+    def __init__(self, *sensors, cleaner):
+        super(Mo, self).__init__(*sensors)
+        self.cleaner = cleaner
         
-def populate(max):
-    """
-        Crea una población de villanos igual al valor que se le pasa como parámetro.
-
-        :param max: Número máximo de villanos que se requiere.
-        :type max: int.
-        :returns: list population-- Lista con los villanos y sus valores.
-    """
-    population=[]
-    for i in range(0,max):
-        population.append(Villain())
-    return population
+def getLine(fileL):
+    stripedLine=[]
+    with open(fileL,'r') as f:
+        for line in f:
+            stripedLine.append([int(a) for a in line.strip(" \t\r\n").split(',')])
+    return stripedLine
 
 
 if __name__ == '__main__':
+    lineToFollow=getLine("linea.txt")
+    a1=Agent()
+    for line in lineToFollow:
+        a1.sense(line)
+        a1.motion()
+
+
 
