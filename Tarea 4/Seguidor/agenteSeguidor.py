@@ -16,17 +16,16 @@ class Agent:
 	    Clase Agente.
         Esta clase define a nuestro agente de reflejo simple de la siguente manera.
 	    Atributos:
-	       - sensores: Un diccionario con el estado actual de cada sensor
-           - motores: Un diccioario con el estado respuesta de los motores
+	       - sensors: Un diccionario con el estado actual de cada sensor.
+           - motors: Un diccioario con el estado respuesta de los motores.
 
 	    Se puede usar de la siguiente manera:
-	        >>> darthVader=Villain()
-            >>> darthVader.abilities
-            [2,3,0,3,7,1,2,4,3,8]
-            #También se puede pasar una lista:
-            >>> kidBu=Villain([4,4,1,2,1,1,5,4,3,2])
-            >>> kidBu.abilities
-            [4,4,1,2,1,1,5,4,3,2]
+	        >>> walle=Agent()
+            Giro rápido en espiral
+            #También se puede pasar el estado de los sensores:
+            >>> eva=Agent([0,1,0])
+            
+            >>> 
     """
 
     def __init__(self,*sensors):
@@ -100,7 +99,12 @@ class Agent:
 
 
 class Mo(Agent):
-    """docstring for Mo"""
+    """
+    Clase Mo.
+    Esta clase hereda de la clase Agent y define al mismo agente de reflejo simple pero agrega otro sensor para detectar la suciedad.
+    Atributos:
+       - cleaner: Un booleano que detecta si en su camino hay suciedad y activar el limpiador.
+    """
     def __init__(self, *sensors, cleaner):
         super(Mo, self).__init__(*sensors)
         self.cleaner = cleaner
@@ -117,7 +121,7 @@ if __name__ == '__main__':
     lineToFollow=getLine("linea.txt")
     a1=Agent()
     for line in lineToFollow:
-        a1.sense(line)
+        print(a1.sense(line))
         a1.motion()
 
 
