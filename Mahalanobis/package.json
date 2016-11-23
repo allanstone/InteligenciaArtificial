@@ -1,0 +1,18 @@
+{
+  "name": "mahalanobis",
+  "version": "1.0.0",
+  "description": "Algoritmo de clasificación de mahalanobis",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "algoritmo",
+    "mahalanobis"
+  ],
+  "author": "Margaro Sánchez",
+  "license": "MIT",
+  "dependencies": {
+    "mathjs": "^3.8.0"
+  }
+}

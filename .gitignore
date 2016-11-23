@@ -14,7 +14,7 @@ Tarea 1/__pycache__
 .viminfo
 # C extensions
 *.so
-
+Mahalanobis/node_modules
 #Source files of sphynx document tool
 /Polinomios/build/*
 /Polinomios/source/*
